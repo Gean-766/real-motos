@@ -1,0 +1,10 @@
+# Ferramentas locais
+.claude/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependências (não usadas neste site estático, mas por segurança)
+node_modules/

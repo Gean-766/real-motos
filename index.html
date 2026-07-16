@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Real Motos — Oficina de Motos em Nova Mutum-MT | Peças e Serviços</title>
+<meta name="description" content="Real Motos: oficina e loja de peças de motos em Nova Mutum-MT. Revisão, manutenção, troca de óleo, pneus, elétrica e injeção com orçamento transparente e atendimento rápido pelo WhatsApp." />
+<meta name="theme-color" content="#0a0b0f" />
+<meta name="author" content="Real Motos" />
+<meta name="geo.region" content="BR-MT" />
+<meta name="geo.placename" content="Nova Mutum" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Real Motos — Oficina de Motos em Nova Mutum-MT" />
+<meta property="og:description" content="Sua moto pronta para rodar com transparência, rapidez e peças de confiança. Atendimento ágil pelo WhatsApp em Nova Mutum-MT." />
+<meta property="og:image" content="logo-real-motos.jpg" />
+<meta property="og:locale" content="pt_BR" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0b0f'/%3E%3Ctext x='50' y='70' font-family='Arial' font-size='60' font-weight='900' fill='%235b57e8' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#0a0b0f;
+    --bg-2:#0e0f16;
+    --surface:#14151f;
+    --surface-2:#1a1b28;
+    --border:#282a3b;
+    --blue:#3a36b0;
+    --blue-2:#5b57e8;
+    --blue-deep:#232172;
+    --red:#e4121a;
+    --red-2:#ff3b45;
+    --amber:#ffc107;
+    --wa:#25d366;
+    --wa-dark:#1da851;
+    --text:#f3f4f8;
+    --muted:#9aa0b4;
+    --muted-2:#6a6f85;
+    --radius:16px;
+    --shadow:0 20px 50px -20px rgba(0,0,0,.7);
+    --max:1180px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.65;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.font-head{font-family:'Montserrat',sans-serif;line-height:1.1;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  section{position:relative}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--blue-2);margin-bottom:16px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--blue-2);border-radius:2px}
+  .section-title{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:800}
+  .section-sub{color:var(--muted);max-width:620px;margin-top:16px;font-size:1.05rem}
+  .pad{padding:96px 0}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;
+    font-size:1rem;padding:15px 26px;border-radius:60px;cursor:pointer;border:none;
+    transition:transform .18s ease,box-shadow .25s ease,background .2s ease;white-space:nowrap}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-wa{background:var(--wa);color:#052e16;box-shadow:0 12px 30px -10px rgba(37,211,102,.6)}
+  .btn-wa:hover{background:#2fe673;transform:translateY(-2px)}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:0 12px 30px -10px rgba(58,54,176,.7)}
+  .btn-blue:hover{background:var(--blue-2);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+  .btn-ghost:hover{border-color:var(--blue-2);color:#fff;transform:translateY(-2px)}
+  .btn-sm{padding:11px 20px;font-size:.9rem}
+
+  /* Header */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;border-bottom:1px solid transparent;
+    transition:background .3s ease,backdrop-filter .3s ease,border-color .3s ease,padding .3s ease}
+  header.scrolled{background:rgba(10,11,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:12px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:flex;align-items:center;gap:12px;font-family:'Montserrat';font-weight:900;font-size:1.3rem;letter-spacing:-.01em}
+  .logo-mark{width:44px;height:44px;border-radius:11px;flex:none;
+    background:linear-gradient(135deg,var(--blue-2),var(--blue-deep));display:grid;place-items:center;
+    color:#fff;font-size:1.4rem;font-weight:900;box-shadow:0 8px 20px -8px rgba(91,87,232,.8);position:relative;overflow:hidden}
+  .logo-mark::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.28),transparent 45%)}
+  .logo span b{color:var(--blue-2)}
+  .logo small{display:block;font-family:'Inter';font-weight:600;font-size:.6rem;letter-spacing:.24em;color:var(--muted);text-transform:uppercase;margin-top:0}
+
+  .nav-links{display:flex;align-items:center;gap:6px}
+  .nav-links a{padding:9px 14px;border-radius:10px;font-size:.94rem;font-weight:500;color:var(--muted);transition:color .2s,background .2s}
+  .nav-links a:hover{color:#fff;background:var(--surface)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+  .burger span{width:26px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
+  .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+  /* Hero */
+  .hero{position:relative;padding:140px 0 80px;overflow:hidden;
+    background:radial-gradient(120% 90% at 85% 0%,rgba(58,54,176,.28),transparent 55%),
+      radial-gradient(80% 70% at 0% 100%,rgba(91,87,232,.1),transparent 60%),var(--bg)}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.55;pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    background-size:44px 44px;
+    -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 25%,#000,transparent 75%);
+            mask-image:radial-gradient(ellipse 70% 60% at 50% 25%,#000,transparent 75%)}
+  .hero-diag{position:absolute;top:-20%;right:-10%;width:60%;height:150%;
+    background:linear-gradient(135deg,rgba(58,54,176,.22),transparent 70%);transform:skewX(-14deg);pointer-events:none}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:start}
+  .badge-loc{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--muted);
+    background:var(--surface);border:1px solid var(--border);padding:7px 15px;border-radius:60px;margin-bottom:22px}
+  .badge-loc svg{width:15px;height:15px;color:var(--blue-2)}
+  .hero h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:900;letter-spacing:-.03em}
+  .hero h1 .hl{color:var(--blue-2)}
+  .hero p.lead{font-size:1.15rem;color:var(--muted);margin:22px 0 0;max-width:560px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:14px 26px;margin-top:32px}
+  .hero-trust .t{display:flex;align-items:center;gap:10px;font-size:.92rem;color:#cfd3e0;font-weight:500}
+  .hero-trust .t svg{width:20px;height:20px;color:var(--wa);flex:none}
+
+  /* Hero mini map (below trust badges) */
+  .hero-map{margin-top:26px;background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-map .frame{height:220px;position:relative}
+  .hero-map iframe{width:100%;height:100%;border:0;filter:grayscale(.15) contrast(1.05)}
+  .hero-map .foot{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;flex-wrap:wrap}
+  .hero-map .foot .addr{font-size:.9rem;color:var(--muted)}
+  .hero-map .foot .addr b{color:var(--text)}
+
+  /* Hero side (logo + card) */
+  .hero-side{display:flex;flex-direction:column;gap:20px}
+  .logo-figure{background:#000;border:1px solid var(--border);border-radius:18px;overflow:hidden;
+    box-shadow:var(--shadow);aspect-ratio:1600/360}
+  .logo-figure img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .hero-card{position:relative;background:linear-gradient(160deg,var(--surface-2),var(--surface));
+    border:1px solid var(--border);border-radius:18px;padding:26px 28px;box-shadow:var(--shadow)}
+  .hero-card::before{content:"";position:absolute;top:0;left:24px;right:24px;height:3px;border-radius:3px;
+    background:linear-gradient(90deg,var(--blue-2),var(--red))}
+  .rating-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:4px}
+  .stars{display:inline-flex;gap:3px}
+  .stars svg{width:22px;height:22px;color:var(--amber)}
+  .hero-card .rate-big{text-align:center;font-family:'Montserrat';font-weight:800;font-size:1.02rem}
+  .hero-card .rate-sub{text-align:center;color:var(--muted);font-size:.84rem;margin-bottom:18px}
+  .mini-list{display:grid;gap:11px}
+  .mini-list li{display:flex;align-items:center;gap:12px;list-style:none;font-size:.94rem;color:#dfe3ea}
+  .mini-list .chk{width:26px;height:26px;border-radius:8px;background:rgba(37,211,102,.14);display:grid;place-items:center;flex:none}
+  .mini-list .chk svg{width:15px;height:15px;color:var(--wa)}
+
+  /* Trust strip */
+  .trust-strip{background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .trust-item{padding:34px 26px;border-right:1px solid var(--border)}
+  .trust-item:last-child{border-right:none}
+  .trust-item .ic{width:46px;height:46px;border-radius:12px;background:rgba(91,87,232,.14);display:grid;place-items:center;margin-bottom:16px}
+  .trust-item .ic svg{width:24px;height:24px;color:var(--blue-2)}
+  .trust-item h3{font-size:1.08rem;font-weight:700;margin-bottom:6px}
+  .trust-item p{font-size:.9rem;color:var(--muted)}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-panel{position:relative;border-radius:22px;border:1px solid var(--border);padding:34px;
+    background:radial-gradient(90% 90% at 20% 10%,rgba(58,54,176,.28),transparent 60%),linear-gradient(160deg,var(--surface-2),#08090d);
+    box-shadow:var(--shadow)}
+  .about-panel .emblem{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--blue),var(--blue-deep));box-shadow:0 10px 24px -10px rgba(58,54,176,.9);margin-bottom:20px}
+  .about-panel .emblem svg{width:34px;height:34px;color:#fff}
+  .about-panel h3{font-size:1.35rem;font-weight:800;margin-bottom:6px}
+  .about-panel .p-sub{color:var(--muted);font-size:.96rem;margin-bottom:22px}
+  .panel-rows{display:grid;gap:12px;margin-bottom:22px}
+  .panel-rows .r{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.03);border:1px solid var(--border);
+    border-radius:12px;padding:13px 15px;font-weight:600;font-size:.96rem}
+  .panel-rows .r svg{width:20px;height:20px;color:var(--wa);flex:none}
+  .panel-brands{display:flex;flex-wrap:wrap;gap:8px}
+  .panel-brands span{font-family:'Montserrat';font-weight:700;font-size:.82rem;letter-spacing:.04em;
+    color:var(--muted);border:1px solid var(--border);border-radius:60px;padding:6px 14px}
+
+  .about-text h2{margin-bottom:6px}
+  .about-text p{color:var(--muted);margin-top:18px;font-size:1.05rem}
+  .about-points{display:grid;gap:14px;margin-top:26px}
+  .about-points li{display:flex;gap:14px;list-style:none;align-items:flex-start}
+  .about-points .ic{width:30px;height:30px;border-radius:9px;background:rgba(37,211,102,.14);display:grid;place-items:center;flex:none;margin-top:2px}
+  .about-points .ic svg{width:17px;height:17px;color:var(--wa)}
+  .about-points b{color:var(--text)}
+  .about-points span{color:var(--muted);font-size:.95rem}
+
+  /* Services */
+  .services{background:var(--bg-2)}
+  .svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc-card{background:linear-gradient(180deg,var(--surface),var(--bg-2));border:1px solid var(--border);
+    border-radius:var(--radius);padding:30px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;position:relative;overflow:hidden}
+  .svc-card::after{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:linear-gradient(var(--blue-2),var(--blue-deep));transform:scaleY(0);transform-origin:top;transition:transform .3s ease}
+  .svc-card:hover{transform:translateY(-6px);border-color:#3a3c55;box-shadow:var(--shadow)}
+  .svc-card:hover::after{transform:scaleY(1)}
+  .svc-card .ic{width:54px;height:54px;border-radius:14px;background:rgba(91,87,232,.13);display:grid;place-items:center;margin-bottom:20px;transition:background .25s}
+  .svc-card:hover .ic{background:var(--blue)}
+  .svc-card .ic svg{width:28px;height:28px;color:var(--blue-2);transition:color .25s}
+  .svc-card:hover .ic svg{color:#fff}
+  .svc-card h3{font-size:1.22rem;font-weight:700;margin-bottom:10px}
+  .svc-card p{color:var(--muted);font-size:.96rem}
+
+  /* Brands */
+  .brands{text-align:center}
+  .brands h2{font-family:'Montserrat';color:var(--muted-2);margin-bottom:28px;text-transform:uppercase;letter-spacing:.1em;font-size:.95rem;font-weight:700}
+  .brand-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+  .brand-chip{padding:12px 28px;border:1px solid var(--border);border-radius:60px;font-family:'Montserrat';
+    font-weight:800;font-size:1.1rem;color:var(--muted);background:var(--surface);transition:color .2s,border-color .2s,transform .2s}
+  .brand-chip:hover{color:#fff;border-color:var(--blue-2);transform:translateY(-3px)}
+
+  /* Steps */
+  .steps{background:var(--bg-2)}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;position:relative}
+  .step{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:34px 28px;position:relative}
+  .step .num{font-family:'Montserrat';font-weight:900;font-size:3.4rem;line-height:1;
+    background:linear-gradient(135deg,var(--blue-2),var(--blue-deep));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+  .step h3{font-size:1.25rem;font-weight:700;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.97rem}
+  .step .arrow{position:absolute;top:50%;right:-32px;transform:translateY(-50%);color:var(--border);z-index:3}
+  .step .arrow svg{width:26px;height:26px}
+
+  /* Reviews */
+  .reviews-card{background:radial-gradient(120% 120% at 100% 0%,rgba(91,87,232,.14),transparent 55%),linear-gradient(160deg,var(--surface-2),var(--surface));
+    border:1px solid var(--border);border-radius:24px;padding:48px;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;box-shadow:var(--shadow)}
+  .reviews-score{text-align:center}
+  .reviews-score .big{font-family:'Montserrat';font-weight:900;font-size:4rem;line-height:1;color:#fff}
+  .reviews-score .stars{justify-content:center;margin:8px 0 4px}
+  .reviews-score .lbl{color:var(--muted);font-size:.85rem}
+  .reviews-mid h2{font-size:1.7rem;font-weight:800;margin-bottom:10px}
+  .reviews-mid p{color:var(--muted)}
+  .reviews-mid .gwrap{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:.9rem;color:var(--muted)}
+  .g-logo{width:20px;height:20px}
+  @media(max-width:860px){.reviews-card{grid-template-columns:1fr;text-align:center;gap:26px;padding:34px}.reviews-mid .gwrap{justify-content:center}}
+
+  /* FAQ */
+  .faq-wrap{max-width:820px;margin:46px auto 0}
+  .faq-item{border:1px solid var(--border);border-radius:14px;margin-bottom:14px;background:var(--surface);overflow:hidden;transition:border-color .2s}
+  .faq-item.open{border-color:var(--blue-2)}
+  .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;color:#fff;padding:22px 24px;
+    font-size:1.06rem;font-weight:600;font-family:'Inter';display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .faq-q .pm{width:26px;height:26px;flex:none;position:relative;transition:transform .3s}
+  .faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;background:var(--blue-2);border-radius:2px;top:50%;left:50%;transition:.3s}
+  .faq-q .pm::before{width:14px;height:2.5px;transform:translate(-50%,-50%)}
+  .faq-q .pm::after{width:2.5px;height:14px;transform:translate(-50%,-50%)}
+  .faq-item.open .pm::after{transform:translate(-50%,-50%) scaleY(0)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .faq-a p{padding:0 24px 22px;color:var(--muted)}
+
+  /* Location */
+  .loc{background:var(--bg-2)}
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .loc-info{display:flex;flex-direction:column;gap:18px}
+  .info-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;display:flex;gap:16px;align-items:flex-start;transition:border-color .2s,transform .2s}
+  .info-card:hover{border-color:#3a3c55;transform:translateY(-2px)}
+  .info-card .ic{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;background:rgba(91,87,232,.13)}
+  .info-card .ic svg{width:22px;height:22px;color:var(--blue-2)}
+  .info-card.wa .ic{background:rgba(37,211,102,.14)}
+  .info-card.wa .ic svg{color:var(--wa)}
+  .info-card h4{font-size:1.05rem;margin-bottom:3px}
+  .info-card p,.info-card a{color:var(--muted);font-size:.95rem}
+  .info-card a{display:block}
+  .info-card a:hover{color:var(--wa)}
+  .map-box{border-radius:18px;overflow:hidden;border:1px solid var(--border);min-height:420px;box-shadow:var(--shadow)}
+  .map-box iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.15) contrast(1.05)}
+
+  /* Final CTA */
+  .final{background:radial-gradient(90% 120% at 50% 0%,rgba(58,54,176,.3),transparent 60%),linear-gradient(180deg,var(--bg),#06070a);text-align:center}
+  .final h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;max-width:800px;margin:0 auto}
+  .final p{color:var(--muted);font-size:1.15rem;max-width:560px;margin:20px auto 0}
+  .final .hero-actions{justify-content:center}
+
+  /* Footer */
+  footer{background:#06070a;border-top:1px solid var(--border);padding:60px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  .foot-brand p{color:var(--muted);font-size:.95rem;margin-top:18px;max-width:340px}
+  .foot-col h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted-2);margin-bottom:18px;font-family:'Montserrat'}
+  .foot-col a,.foot-col p{display:block;color:var(--muted);font-size:.95rem;margin-bottom:11px;transition:color .2s}
+  .foot-col a:hover{color:#fff}
+  .foot-wa{display:flex;align-items:center;gap:9px}
+  .foot-wa svg{width:17px;height:17px;color:var(--wa);flex:none}
+  .foot-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted-2);font-size:.85rem}
+
+  /* Floating WhatsApp */
+  .fab{position:fixed;bottom:24px;right:24px;z-index:90;width:60px;height:60px;border-radius:50%;background:var(--wa);
+    display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(37,211,102,.6);transition:transform .2s;animation:pulse 2.6s infinite}
+  .fab:hover{transform:scale(1.08)}
+  .fab svg{width:32px;height:32px;color:#fff}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+  /* Responsive */
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .hero-side{max-width:520px}
+    .about-grid{grid-template-columns:1fr;gap:38px}
+    .svc-grid,.steps-grid{grid-template-columns:1fr 1fr}
+    .trust-grid{grid-template-columns:1fr 1fr}
+    .trust-item:nth-child(2){border-right:none}
+    .trust-item{border-bottom:1px solid var(--border)}
+    .loc-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .step .arrow{display:none}
+  }
+  @media(max-width:680px){
+    .nav-links,.nav-cta .btn-wa{display:none}
+    .burger{display:flex}
+    .nav-links.mobile-open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;
+      background:rgba(10,11,15,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:16px 24px 24px;gap:4px}
+    .nav-links.mobile-open a{padding:13px 14px;font-size:1.05rem}
+    .pad{padding:70px 0}
+    .svc-grid,.steps-grid,.trust-grid,.foot-grid{grid-template-columns:1fr}
+    .trust-item{border-right:none}
+    .hero{padding:116px 0 60px}
+    .reviews-card{padding:28px 20px}
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"MotorcycleRepair",
+  "name":"Real Motos",
+  "description":"Oficina e loja de peças de motos em Nova Mutum-MT: revisão, manutenção, troca de óleo, pneus, elétrica e injeção com orçamento transparente e atendimento pelo WhatsApp.",
+  "image":"logo-real-motos.jpg",
+  "address":{"@type":"PostalAddress","streetAddress":"R. dos Mamoeiros - Jardim Primavera","addressLocality":"Nova Mutum","addressRegion":"MT","postalCode":"78450-112","addressCountry":"BR"},
+  "areaServed":"Nova Mutum e região - MT",
+  "telephone":"+55 65 99668-5172",
+  "priceRange":"$$",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Real Motos">
+      <span class="logo-mark">R</span>
+      <span>REAL<b> MOTOS</b><small>Peças e Serviços</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#localizacao">Localização</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/5565996685172?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Real%20Motos%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20a%20minha%20moto." target="_blank" rel="noopener" class="btn btn-wa btn-sm">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z M12 2A10 10 0 0 0 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20z"/></svg>
+        WhatsApp
+      </a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-diag"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="badge-loc reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Nova Mutum – MT · Oficina de Motos
+      </span>
+      <h1 class="reveal d1">Sua moto pronta pra rodar com <span class="hl">confiança</span> e agilidade.</h1>
+      <p class="lead reveal d2">Revisão, manutenção, troca de óleo, pneus, elétrica e acessórios em um só lugar — com orçamento claro e atendimento rápido pelo WhatsApp.</p>
+      <div class="hero-actions reveal d3">
+        <a href="https://wa.me/5565996685172?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Real%20Motos%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20a%20minha%20moto." target="_blank" rel="noopener" class="btn btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z M12 2A10 10 0 0 0 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+      </div>
+      <div class="hero-trust reveal d4">
+        <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg> Orçamento transparente</div>
+        <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg> Aprovação pelo WhatsApp</div>
+        <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg> Garantia no serviço</div>
+      </div>
+
+      <!-- Google Maps logo abaixo dos itens acima -->
+      <div class="hero-map reveal d4">
+        <div class="frame">
+          <iframe title="Localização da Real Motos em Nova Mutum-MT"
+            src="https://maps.google.com/maps?q=Real%20Motos%2C%20R.%20dos%20Mamoeiros%2C%20Jardim%20Primavera%2C%20Nova%20Mutum%20-%20MT%2C%2078450-112&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="foot">
+          <span class="addr"><b>R. dos Mamoeiros</b> – Jardim Primavera, Nova Mutum-MT</span>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Real+Motos+R.+dos+Mamoeiros+Jardim+Primavera+Nova+Mutum+MT" target="_blank" rel="noopener" class="btn btn-blue btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Traçar rota
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <figure class="logo-figure reveal d1">
+        <img src="logo-real-motos.jpg" alt="Real Motos — Peças e Serviços · Nova Mutum-MT" />
+      </figure>
+      <div class="hero-card reveal d2">
+        <div class="rating-row">
+          <span class="stars" aria-label="5 estrelas">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+          </span>
+        </div>
+        <div class="rate-big">Clientes satisfeitos em Nova Mutum</div>
+        <div class="rate-sub">Atendimento avaliado no Google</div>
+        <ul class="mini-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> Diagnóstico honesto e explicado</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> Serviço rápido, sem enrolação</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> Peças de marcas confiáveis</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span> Preço justo e parcelamento</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="wrap trust-grid">
+    <div class="trust-item reveal">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <h3>Transparência</h3>
+      <p>Diagnóstico explicado, fotos do serviço e aprovação pelo WhatsApp antes de mexer.</p>
+    </div>
+    <div class="trust-item reveal d1">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
+      <h3>Agilidade real</h3>
+      <p>Troca de óleo, pastilhas e pneus com hora marcada pra você não ficar parado.</p>
+    </div>
+    <div class="trust-item reveal d2">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h3>Peças de confiança</h3>
+      <p>Trabalhamos com marcas reconhecidas e garantia no serviço executado.</p>
+    </div>
+    <div class="trust-item reveal d3">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <h3>Preço justo</h3>
+      <p>Orçamento claro, opções pra cada bolso e parcelamento sem estresse.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="pad" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-panel reveal">
+      <div class="emblem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h3>Oficina especializada</h3>
+      <p class="p-sub">Peças e serviços com quem entende de moto de verdade, aqui em Nova Mutum-MT.</p>
+      <div class="panel-rows">
+        <div class="r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Especialistas em Honda e Yamaha</div>
+        <div class="r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Diagnóstico honesto e explicado</div>
+        <div class="r"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Entrega no prazo combinado</div>
+      </div>
+      <div class="panel-brands">
+        <span>HONDA</span><span>YAMAHA</span><span>SUZUKI</span><span>KAWASAKI</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="eyebrow reveal">Conheça a Real Motos</span>
+      <h2 class="section-title reveal d1">Uma oficina completa pra quem depende da moto todos os dias.</h2>
+      <p class="reveal d2">Do trabalho à aventura, a sua moto é o que te move — e é isso que a gente cuida. Fazemos diagnóstico honesto, explicamos o que é <b>realmente necessário</b> e entregamos rápido pra você não ficar na mão. Atendimento de gente que entende de moto.</p>
+      <ul class="about-points">
+        <li class="reveal d2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Diagnóstico sem enrolação</b><br><span>A gente mostra o problema e explica antes de qualquer serviço.</span></span></li>
+        <li class="reveal d3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Entrega no prazo combinado</b><br><span>Você aprova pelo WhatsApp e retira no horário certo.</span></span></li>
+        <li class="reveal d4"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Atende todas as marcas</b><br><span>Nacionais e importadas, de moto de trabalho a esportiva.</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="pad services" id="servicos">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <span class="eyebrow reveal">O que fazemos</span>
+        <h2 class="section-title reveal d1">Serviços que mantêm sua moto no ponto</h2>
+      </div>
+      <a href="https://wa.me/5565996685172?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Real%20Motos." target="_blank" rel="noopener" class="btn btn-blue reveal d2">Pedir orçamento</a>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9"/><path d="m8 12 3 3 8-9"/></svg></div>
+        <h3>Revisão completa</h3>
+        <p>Checagem de mais de 30 itens: fluidos, filtros, freios e ajustes de segurança.</p>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13a8 8 0 0 1 16 0v3a2 2 0 0 1-2 2h-2v-5"/><path d="M4 16v-3"/><path d="M4 16a2 2 0 0 0 2 2h2v-5"/></svg></div>
+        <h3>Acessórios & capacetes</h3>
+        <p>Soluções pra conforto, proteção e estilo, com produtos de qualidade.</p>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/></svg></div>
+        <h3>Pneus e rodas</h3>
+        <p>Montagem, balanceamento e alinhamento pra rodar seguro e macio.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4"/><path d="M8 6h8l-8 4h8l-8 4h8"/></svg></div>
+        <h3>Suspensão</h3>
+        <p>Troca de óleo, retentores e regulagens pra estabilidade e conforto.</p>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3>Elétrica e injeção</h3>
+        <p>Bateria, carga, scanner e diagnóstico de falhas com equipamento certo.</p>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></div>
+        <h3>Troca de óleo express</h3>
+        <p>Feita em poucos minutos, com descarte correto e óleo recomendado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="pad brands">
+  <div class="wrap">
+    <h2 class="reveal">Atendemos as principais marcas</h2>
+    <div class="brand-row">
+      <span class="brand-chip reveal">Honda</span>
+      <span class="brand-chip reveal d1">Yamaha</span>
+      <span class="brand-chip reveal d2">Suzuki</span>
+      <span class="brand-chip reveal d3">Kawasaki</span>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="pad steps" id="como-funciona">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow reveal" style="justify-content:center">Sem enrolação</span>
+    <h2 class="section-title reveal d1">3 passos pra resolver sua moto</h2>
+    <p class="section-sub reveal d2" style="margin:16px auto 0">Simples, rápido e sem burocracia — do primeiro contato até você retirar a moto.</p>
+    <div class="steps-grid" style="text-align:left">
+      <div class="step reveal">
+        <div class="num">1</div>
+        <h3>Chame no WhatsApp</h3>
+        <p>Conte o que sua moto precisa ou o que está sentindo ao rodar.</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="step reveal d1">
+        <div class="num">2</div>
+        <h3>Receba o diagnóstico</h3>
+        <p>A gente avalia e passa um orçamento claro, com as opções pra você.</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="step reveal d2">
+        <div class="num">3</div>
+        <h3>Aprove e retire</h3>
+        <p>Você aprova, a gente executa e entrega no prazo combinado.</p>
+      </div>
+    </div>
+    <div class="hero-actions reveal d2" style="justify-content:center;margin-top:44px">
+      <a href="https://wa.me/5565996685172?text=Ol%C3%A1!%20Quero%20resolver%20a%20minha%20moto%20com%20a%20Real%20Motos." target="_blank" rel="noopener" class="btn btn-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z M12 2A10 10 0 0 0 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20z"/></svg>
+        Começar agora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="pad" id="avaliacoes">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:40px">
+      <span class="eyebrow reveal" style="justify-content:center">Quem confia, recomenda</span>
+      <h2 class="section-title reveal d1">O que dizem sobre a Real Motos</h2>
+    </div>
+    <div class="reviews-card reveal d1">
+      <div class="reviews-score">
+        <div class="big">5,0</div>
+        <span class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.5 21 12 17.3 5.5 21l1.8-7.3L2 9.1l7-.6z"/></svg>
+        </span>
+        <div class="lbl">avaliação dos clientes</div>
+      </div>
+      <div class="reviews-mid">
+        <h2>Atendimento nota máxima em Nova Mutum</h2>
+        <p>“Ótimo atendimento, tudo tranquilo e resolvido rápido.” É esse tipo de experiência que a gente entrega todo dia. Veja as avaliações reais dos nossos clientes no Google e conte pra gente como foi o seu atendimento.</p>
+        <div class="gwrap">
+          <svg class="g-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.2-4.8 3.2-7.9z"/><path fill="#34A853" d="M12 23c2.9 0 5.4-1 7.2-2.6l-3.6-2.7c-1 .7-2.3 1.1-3.6 1.1-2.8 0-5.1-1.9-6-4.4H2.3v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M6 14.4a6.6 6.6 0 0 1 0-4.2V7.4H2.3a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.5c1.6 0 3 .5 4.1 1.6l3.1-3.1A11 11 0 0 0 2.3 7.4L6 10.2c.9-2.6 3.2-4.7 6-4.7z"/></svg>
+          Avaliações verificadas no Google
+        </div>
+      </div>
+      <div>
+        <a href="https://www.google.com/search?q=Real+Motos+Nova+Mutum+MT" target="_blank" rel="noopener" class="btn btn-ghost">Ver no Google</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pad services">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow reveal" style="justify-content:center">Tire suas dúvidas</span>
+    <h2 class="section-title reveal d1">Perguntas frequentes</h2>
+    <div class="faq-wrap" style="text-align:left">
+      <div class="faq-item reveal">
+        <button class="faq-q">Vocês atendem sem agendamento?<span class="pm"></span></button>
+        <div class="faq-a"><p>Sim! Mas para serviços rápidos, como troca de óleo e pneus, recomendamos agendar pelo WhatsApp para reduzir a sua espera.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Quais as formas de pagamento?<span class="pm"></span></button>
+        <div class="faq-a"><p>Aceitamos dinheiro, PIX, cartão de débito e crédito, com opções de parcelamento. Fale com a gente que explicamos as condições.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">A garantia cobre o quê?<span class="pm"></span></button>
+        <div class="faq-a"><p>Oferecemos garantia no serviço executado e nas peças aplicadas, conforme o tipo de reparo. Combinamos tudo de forma clara antes de iniciar.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Atendem todas as marcas de moto?<span class="pm"></span></button>
+        <div class="faq-a"><p>Sim, trabalhamos com as principais marcas nacionais e importadas — de moto de trabalho a esportiva. Chame no WhatsApp com o modelo da sua.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Como recebo o orçamento?<span class="pm"></span></button>
+        <div class="faq-a"><p>Após avaliar a moto, enviamos o orçamento pelo WhatsApp com as opções. Você só aprova o que quiser, sem compromisso.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="pad loc" id="localizacao">
+  <div class="wrap">
+    <div style="margin-bottom:44px">
+      <span class="eyebrow reveal">Onde estamos</span>
+      <h2 class="section-title reveal d1">Venha nos visitar em Nova Mutum</h2>
+      <p class="section-sub reveal d2">Estamos prontos pra te atender. Chame no WhatsApp, ligue ou passe na oficina.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-info">
+        <div class="info-card reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div><h4>Endereço</h4><p>R. dos Mamoeiros – Jardim Primavera<br>Nova Mutum – MT, 78450-112</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Real+Motos+R.+dos+Mamoeiros+Jardim+Primavera+Nova+Mutum+MT" target="_blank" rel="noopener" style="color:var(--blue-2);font-weight:600;margin-top:6px">Traçar rota →</a></div>
+        </div>
+        <div class="info-card wa reveal d1">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z M12 2A10 10 0 0 0 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4A10 10 0 1 0 12 2z"/></svg></div>
+          <div><h4>WhatsApp</h4>
+            <a href="https://wa.me/5565996685172?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Real%20Motos." target="_blank" rel="noopener">(65) 99668-5172 →</a>
+            <a href="https://wa.me/5565996952812?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Real%20Motos." target="_blank" rel="noopener">(65) 99695-2812 →</a>
+          </div>
+        </div>
+        <div class="info-card reveal d2">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><h4>Horário de atendimento</h4><p>Segunda a sexta: 08h – 18h<br>Sábado: 08h – 12h</p></div>
+        </div>
+      </div>
+      <div class="map-box reveal d1">
+        <iframe title="Mapa da Real Motos em Nova Mutum-MT"
+          src="https://maps.google.com/maps?q=Real%20Motos%2C%20R.%20dos%20Mamoeiros%2C%20Jardim%20Primavera%2C%20Nova%20Mutum%20-%20MT%2C%2078450-112&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="pad final">
+  <div class="wrap">
+    <h2 class="reveal">Pronto pra voltar a rodar com segurança?</h2>
+    <p class="reveal d1">Fale com a equipe da Real Motos e receba seu orçamento agora mesmo. Atendimento rápido, transparente e de quem entende de moto.</p>
+    <div class="hero-actions reveal d2">
+      <a href="https://wa.me/5565996685172?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Real%20Motos%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20a%20minha%20moto." target="_blank" rel="noopener" class="btn btn-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z M12 2A10 10 0 0 0 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20z"/></svg>
+        Falar com a Real Motos
+      </a>
+      <a href="tel:+5565996685172" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Ligar agora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="logo"><span class="logo-mark">R</span><span>REAL<b> MOTOS</b><small>Peças e Serviços</small></span></a>
+        <p>Oficina e loja de peças de motos em Nova Mutum-MT. Revisão, manutenção, peças e acessórios com transparência, agilidade e preço justo. Sua moto pronta pra rodar.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#localizacao">Localização</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5565996685172?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Real%20Motos." target="_blank" rel="noopener" class="foot-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4A10 10 0 1 0 12 2z"/></svg>(65) 99668-5172</a>
+        <a href="https://wa.me/5565996952812?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Real%20Motos." target="_blank" rel="noopener" class="foot-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4A10 10 0 1 0 12 2z"/></svg>(65) 99695-2812</a>
+        <p>R. dos Mamoeiros – Jardim Primavera<br>Nova Mutum – MT, 78450-112</p>
+        <p>Seg–Sex 08h–18h · Sáb 08h–12h</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Real Motos. Todos os direitos reservados.</span>
+      <span>Feito para quem vive sobre duas rodas em Nova Mutum-MT.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5565996685172?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Real%20Motos%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20a%20minha%20moto." target="_blank" rel="noopener" class="fab" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z M12 2A10 10 0 0 0 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    navLinks.classList.toggle('mobile-open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    navLinks.classList.remove('mobile-open');
+  }));
+
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const ans = q.nextElementSibling;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) { item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+    });
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
