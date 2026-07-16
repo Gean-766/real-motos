@@ -10,7 +10,7 @@ Site estático (HTML/CSS/JS), sem dependências, focado em conectar o cliente di
 - `vercel.json` — configuração e cabeçalhos de segurança
 
 ## Contato
-- WhatsApp: (65) 99668-5172 / (65) 99695-2812
+- WhatsApp: (65) 99695-2812
 - Endereço: R. dos Mamoeiros – Jardim Primavera, Nova Mutum – MT, 78450-112
 
 ## Publicação
